@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read More Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    button {
+      margin-top: 10px;
+      background: #e74c3c;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #c0392b;
+    }
+    .hidden {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background: #f9f9f9;
+      border-left: 4px solid #e74c3c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- First Card -->
+  <div class="card">
+    <h3>Top IT Skills 2025</h3>
+    <p>Cloud • AI/ML • Cybersecurity • Web Dev • Data Science</p>
+
+    <div id="skillsContent" class="hidden">
+      <p>💡 <b>Cloud Computing:</b> AWS, Azure, GCP</p>
+      <p>🤖 <b>AI/ML:</b> Python, TensorFlow, Scikit-learn</p>
+      <p>🔒 <b>Cybersecurity:</b> Ethical Hacking, Security Tools</p>
+      <p>🌐 <b>Web Dev:</b> React, Node.js, MongoDB</p>
+      <p>📊 <b>Data Science:</b> SQL, Pandas, Power BI</p>
+    </div>
+
+    <button onclick="toggleContent('skillsContent', this)">Read More</button>
+  </div>
+
+  <!-- Second Card -->
+  <div class="card">
+    <h3>How I Built a Smart Snake Rescue & Detection System (My Project Story)</h3>
+    <p>Portfolio • Web Apps • AI Models</p>
+
+    <div id="projectsContent" class="hidden">
+  <p>
+    It was a quiet night, and I was in my room preparing for another long coding session. Suddenly, I noticed movement just outside my door. To my shock, it was a <strong>snake</strong>. My heart raced, and fear gripped me instantly. The patterns on its body looked very similar to a <strong>krait</strong>, one of the most venomous snakes in South Asia.
+  </p>
+
+  <p>
+    I froze. What should I do? Was it truly a krait or just a harmless snake? Could I risk getting closer to check? In that moment, I realized how little I knew about snakes. All kinds of terrifying thoughts crossed my mind: 
+    <em>What if it bit someone? How would we know what kind of snake it was? How would we get to the right hospital in time?</em>
+  </p>
+
+  <!-- Photo in the middle -->
+  <div style="text-align: center; margin: 20px 0;">
+    <img src="/snake1.jpg" alt="Snake" style="max-width: 80%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+  </div>
+
+  <p>
+    That night, I didn’t sleep much. Instead, my fear turned into <strong>curiosity and determination</strong>. I began to imagine a solution: 
+    <em>What if there was a way to instantly identify a snake just by taking a picture? What if people could get life-saving guidance within seconds?</em>
+  </p>
+
+  <p>
+    And that’s how the idea for my <strong>final year project</strong> was born. I started researching snakes, especially the venomous species common in our region. I also studied how artificial intelligence and image recognition could be applied to wildlife identification. Piece by piece, I built a vision: an <strong>AI-powered snake identification and hospital-routing assistant</strong>.
+  </p>
+
+  <p>
+    The app works in a simple but powerful way:
+    <ul>
+      <li> Take a picture of the snake</li>
+      <li> AI predicts whether it’s venomous or non-venomous</li>
+      <li> If venomous, the app suggests the nearest hospital for treatment</li>
+    </ul>
+  </p>
+
+  <p>
+    What began as a frightening personal experience became the driving force behind a project that could potentially save lives. In rural areas especially, snakebites are common, and delays in identifying the species or reaching the right hospital can be fatal. My project aims to bridge that gap with the power of technology.
+  </p>
+
+  <p>
+    Looking back, I realize that moment of fear outside my room was actually the spark that led me to create something meaningful. Sometimes, challenges and fears push us toward innovation. My journey with this project is proof that even a scary situation can inspire a solution that helps others.
+  </p>
+</div>
+
+
+    <button onclick="toggleContent('projectsContent', this)">Read More</button>
+  </div>
+
+<script>
+function toggleContent(id, btn) {
+  let section = document.getElementById(id);
+  if (section.style.display === "none" || section.classList.contains("hidden")) {
+    section.style.display = "block";
+    section.classList.remove("hidden");
+    btn.textContent = "Read Less";
+  } else {
+    section.style.display = "none";
+    btn.textContent = "Read More";
+  }
+}
+</script>
+
+</body>
+</html>
