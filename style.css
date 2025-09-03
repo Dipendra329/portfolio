@@ -511,3 +511,25 @@ footer {
         text-align: center;
     }
 }
+
+/*   for cv button modified  */
+
+
+.btn-cv {
+  display: inline-block;
+  padding: 12px 28px;         /* bigger padding for pill look */
+  margin-top: 15px;
+  background: #ff3b2e;        /* bright red */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;        /* fully rounded pill */
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-cv:hover {
+  background: #e62e20;        /* darker red on hover */
+  transform: scale(1.05);     /* slight zoom effect */
+}
